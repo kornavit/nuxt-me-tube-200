@@ -34,13 +34,11 @@ const fromErrors = ref({
 
 async function onSubmit(){
     const { name } = formData.value
-    const config = useRuntimeConfig()
 
-    const { data:response, error } = await useFetch<any>(
+    const { data:response, error } = await useMyFetch<any>(
             "artist",{
             method: "POST",
             body: {name},
-            baseURL: config.public.apiBaseURL
         }
     )
 

@@ -12,13 +12,10 @@
 
 <script setup type="ts">
 const route = useRoute();
-const config = useRuntimeConfig();
 const pageTitle = `Artist ID: ${route.params.id}`
 
-const { data:artist, error } = await useFetch(
-    `artist/${route.params.id}`,{
-        baseURL:config.public.apiBaseURL
-    }
+const { data:artist, error } = await useMyFetch(
+    `artist/${route.params.id}`,{}
 )
 
 if(artist.value === null){

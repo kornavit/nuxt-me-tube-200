@@ -2,6 +2,10 @@
     <NuxtLayout name="about">
         <h1>Hello World</h1>
     </NuxtLayout>
+
+    <Counter name="One"></Counter>
+    <Counter :name="`Counter` + `Two`"></Counter>
+
     <h1 class="text-3xl font-bold underline">
         Hello world!
     </h1>
