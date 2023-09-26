@@ -5,6 +5,11 @@ export default defineNuxtConfig({
       apiBaseURL: "http://localhost/api/"
     }
   },
+  modules:[
+    '@vueuse/nuxt',
+    '@pinia/nuxt',
+		'@pinia-plugin-persistedstate/nuxt',
+  ],
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   postcss: {
